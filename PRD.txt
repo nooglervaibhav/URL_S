@@ -1,0 +1,86 @@
+
+
+## Title
+URL_S - Simple URL Shortener
+
+## Overview
+URL_S is a web-based application designed to provide users with an easy way to shorten long URLs. The service allows users to generate shortened links, track their usage, and manage their custom URLs. It is targeted at anyone who wishes to share concise, manageable links, especially for use on social media, email, or printed material.
+
+## Goals & Objectives
+- Allow users to quickly shorten long URLs.
+- Optionally provide custom aliases for shortened URLs.
+- Redirect users from short URLs to the original long URLs.
+- Track basic analytics (click count, creation date) for each shortened URL.
+- Simple, user-friendly UI for both desktop and mobile users.
+
+## Target User
+- General internet users
+- Social media managers
+- Marketers
+- Anyone needing to share short, manageable links
+
+## Features
+
+| Feature                  | Description                                                      | Priority |
+|--------------------------|------------------------------------------------------------------|----------|
+| Shorten URL              | Input a long URL and receive a short link                        | High     |
+| Custom Alias             | Optionally specify a custom alias for the short link             | Medium   |
+| Analytics                | Display click count and creation date for each short URL         | Medium   |
+| URL Redirection          | Redirect from short URL to the original long URL                 | High     |
+| Manage URLs              | View and delete previously created short URLs                    | Medium   |
+| Responsive UI            | Works well on desktop and mobile                                 | High     |
+
+## Functional Requirements
+
+### 1. Shorten URL
+- Input: Long URL (and optional custom alias)
+- Output: Short URL
+- Validation: Confirm the input is a valid URL; check alias uniqueness if used
+
+### 2. URL Redirection
+- Accessing a short URL redirects to the original URL
+- 404 for unknown or expired short URLs
+
+### 3. Analytics
+- Store and display number of times a short URL has been accessed
+- Store creation date for each URL
+
+### 4. Manage URLs
+- Display a list of created URLs, their stats, and option to delete
+
+## UI/UX Requirements
+- Clean, modern, mobile-first design
+- 2-3 main screens:
+  - Home (Shorten URL form, list of user’s URLs)
+  - Analytics/details view (optional)
+  - 404/error page
+
+## Tech Stack
+- **Frontend:** HTML, CSS (Tailwind or Bootstrap)
+- **Backend:** Python (Django or Flask)
+- **Database:** SQLite (for fast prototyping), upgradeable to Postgres/MongoDB
+- **Hosting:** Vercel, PythonAnywhere, or similar
+
+## Timeline
+
+| Task                        | Deadline    |
+|-----------------------------|-------------|
+| Requirement Finalization     | Day 1       |
+| UI Wireframes/Design         | Day 2       |
+| URL Shortening Logic         | Day 3       |
+| Analytics & Management View  | Day 4       |
+| Testing                     | Day 5       |
+| Final Touches & Deployment   | Day 6       |
+
+## Success Criteria
+- Users can shorten URLs and be redirected reliably
+- Custom aliases are supported and checked for uniqueness
+- Analytics (at least click count) is displayed per URL
+- Mobile-responsive design
+- No major bugs during basic testing
+
+## Deliverables
+- Working deployed app (Vercel, PythonAnywhere, etc.)
+- Complete codebase on GitHub
+- Short demo video (2-3 minutes)
+- Final report (PDF with screenshots & feature summary)
